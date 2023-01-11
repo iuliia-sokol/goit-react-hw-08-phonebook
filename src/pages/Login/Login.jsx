@@ -23,6 +23,8 @@ const Login = () => {
   const location = useLocation();
   const dispatch = useDispatch();
 
+  console.log(location);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -58,8 +60,8 @@ const Login = () => {
       </GoBackLinkWrapper>
 
       <FormWrapper>
-        <div class="logo-container auth-logo-container">
-          <img alt="movie camera" width="100%" srcset={Animation} />
+        <div>
+          <img alt="animation" width="100%" srcSet={Animation} />
         </div>
         <Form onSubmit={handleSubmit}>
           <InputsWrapper>
@@ -72,7 +74,7 @@ const Login = () => {
               placeholder="Enter your email"
               onChange={onInputChange}
             />
-            <Label for="auth-email">Email</Label>
+            <Label htmlFor="auth-email">Email</Label>
 
             <Input
               type="password"
@@ -83,7 +85,7 @@ const Login = () => {
               placeholder="Enter your password"
               onChange={onInputChange}
             />
-            <Label for="auth-password">Name</Label>
+            <Label htmlFor="auth-password">Name</Label>
           </InputsWrapper>
 
           <BtnsWrapper>

@@ -21,6 +21,8 @@ import { registerUser } from 'redux/authOperations';
 
 const Register = () => {
   const location = useLocation();
+
+  console.log(location);
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -63,8 +65,8 @@ const Register = () => {
       </GoBackLinkWrapper>
 
       <FormWrapper>
-        <div class="logo-container auth-logo-container">
-          <img alt="movie camera" width="100%" srcset={Animation} />
+        <div>
+          <img alt="movie camera" width="100%" srcSet={Animation} />
         </div>
         <Form onSubmit={handleSubmit}>
           <InputsWrapper>
@@ -77,7 +79,7 @@ const Register = () => {
               placeholder="Enter your name"
               onChange={onInputChange}
             />
-            <Label for="auth-name">Name</Label>
+            <Label htmlFor="auth-name">Name</Label>
             <Input
               type="email"
               id="auth-email"
@@ -87,7 +89,7 @@ const Register = () => {
               placeholder="Enter your email"
               onChange={onInputChange}
             />
-            <Label for="auth-email">Email</Label>
+            <Label htmlFor="auth-email">Email</Label>
 
             <Input
               type="password"
@@ -98,7 +100,7 @@ const Register = () => {
               placeholder="Enter your password"
               onChange={onInputChange}
             />
-            <Label for="auth-password">Name</Label>
+            <Label htmlFor="auth-password">Name</Label>
           </InputsWrapper>
 
           <BtnsWrapper>
