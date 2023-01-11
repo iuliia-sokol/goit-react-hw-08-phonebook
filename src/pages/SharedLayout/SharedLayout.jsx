@@ -7,6 +7,7 @@ import { Navigation } from 'components/Navigation/Navigation';
 import { UserLogoutMenu } from 'components/UserLogoutMenu/UserLogoutMenu';
 import { UserLoginMenu } from 'components/UserLoginMenu/UserLoginMenu';
 import { getLogStatus } from 'redux/authSelectors';
+import { PhonebookLogo } from 'components/Logo/Logo';
 
 export const SharedLayout = () => {
   const isLoggedIn = useSelector(getLogStatus);
@@ -14,6 +15,7 @@ export const SharedLayout = () => {
     <Container>
       <Header>
         <Navigation />
+        <PhonebookLogo />
         {isLoggedIn ? <UserLogoutMenu /> : <UserLoginMenu />}
       </Header>
       <Suspense fallback={<Loader />}>

@@ -16,13 +16,11 @@ import {
 } from './Register.styled';
 import { NavLink } from 'components/NavLink/NavLink';
 import { Btn } from 'components/Btn/Btn';
-import Animation from '../../images/code.gif';
+import Animation from '../../images/man.gif';
 import { registerUser } from 'redux/authOperations';
 
 const Register = () => {
   const location = useLocation();
-
-  console.log(location);
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -47,6 +45,7 @@ const Register = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log(name, email, password);
     dispatch(registerUser({ name, email, password }));
     resetForm();
   };
@@ -74,6 +73,7 @@ const Register = () => {
               type="text"
               id="auth-name"
               name="name"
+              value={name}
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               required
               placeholder="Enter your name"
@@ -84,6 +84,7 @@ const Register = () => {
               type="email"
               id="auth-email"
               name="email"
+              value={email}
               required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               placeholder="Enter your email"
@@ -95,12 +96,13 @@ const Register = () => {
               type="password"
               id="auth-password"
               name="password"
+              value={password}
               required
               minLength="6"
               placeholder="Enter your password"
               onChange={onInputChange}
             />
-            <Label htmlFor="auth-password">Name</Label>
+            <Label htmlFor="auth-password">Password</Label>
           </InputsWrapper>
 
           <BtnsWrapper>

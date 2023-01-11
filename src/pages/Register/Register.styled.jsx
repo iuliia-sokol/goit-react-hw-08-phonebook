@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  padding: 0 42px;
+  padding: 0 42px 64px 42px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +72,7 @@ export const AuthNotify = styled.p`
   align-items: center;
   padding: 5px 15px;
   min-width: 110px;
+  width: fit-content;
   min-height: 44px;
   text-align: center;
   font-size: 14px;

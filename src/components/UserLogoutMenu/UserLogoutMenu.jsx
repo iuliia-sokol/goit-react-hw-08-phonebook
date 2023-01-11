@@ -1,19 +1,26 @@
 import { useDispatch, useSelector } from 'react-redux';
-
-import { LogoutBtn, WelcomeText } from './UserLogoutMenu.styled';
+import { BiHappyBeaming } from 'react-icons/bi';
+import { Wrapper, LogoutBtn, WelcomeText } from './UserLogoutMenu.styled';
 import { logoutUser } from '../../redux/authOperations';
 import { getUserName } from 'redux/authSelectors';
+import { Btn } from 'components/Btn/Btn';
 
 export const UserLogoutMenu = () => {
   const dispatch = useDispatch();
   const name = useSelector(getUserName);
 
   return (
-    <div>
-      <WelcomeText> Welcome back, {name}</WelcomeText>
-      <LogoutBtn type="button" onClick={() => dispatch(logoutUser())}>
-        Log out
-      </LogoutBtn>
-    </div>
+    <Wrapper>
+      <WelcomeText>
+        <BiHappyBeaming size={36} />
+        <p>Welcome back, {name} !</p>
+      </WelcomeText>
+      <Btn
+        status="logout"
+        type="button"
+        text="Log out"
+        onClick={() => dispatch(logoutUser())}
+      />
+    </Wrapper>
   );
 };

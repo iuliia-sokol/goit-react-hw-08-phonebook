@@ -23,8 +23,6 @@ const Login = () => {
   const location = useLocation();
   const dispatch = useDispatch();
 
-  console.log(location);
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -69,6 +67,7 @@ const Login = () => {
               type="email"
               id="auth-email"
               name="email"
+              value={email}
               required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               placeholder="Enter your email"
@@ -80,12 +79,13 @@ const Login = () => {
               type="password"
               id="auth-password"
               name="password"
+              value={password}
               required
               minLength="6"
               placeholder="Enter your password"
               onChange={onInputChange}
             />
-            <Label htmlFor="auth-password">Name</Label>
+            <Label htmlFor="auth-password">Password</Label>
           </InputsWrapper>
 
           <BtnsWrapper>

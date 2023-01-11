@@ -4,6 +4,7 @@ export const BtnElement = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: fit-content;
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 24px;
