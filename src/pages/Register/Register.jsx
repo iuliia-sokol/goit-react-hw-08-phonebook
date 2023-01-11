@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-
+import { useLocation } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -15,7 +15,6 @@ import {
   InputsWrapper,
 } from './Register.styled';
 import { NavLink } from 'components/NavLink/NavLink';
-import { useLocation } from 'react-router-dom';
 import { Btn } from 'components/Btn/Btn';
 import Animation from '../../images/code.gif';
 import { registerUser } from 'redux/authOperations';
