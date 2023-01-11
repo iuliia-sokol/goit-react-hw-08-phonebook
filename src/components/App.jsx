@@ -1,19 +1,16 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-// import { Container, MainHeader, SubHeader } from './App.styled';
-// import { ContactForm } from './ContactForm/ContactForm';
-// import { Filter } from './Filter/Filter';
-// import { ContactList } from './ContactList/ContactList';
-// import { Loader } from './Loader/Loader';
 import { fetchCurrentUser } from '../redux/authOperations';
 import { SharedLayout } from 'pages/SharedLayout/SharedLayout';
+import { PublicRoute } from 'routes/PublicRoute';
+import { PrivateRoute } from 'routes/PrivateRoute';
 
-const Home = lazy(() => import('./Home/Home'));
-const Register = lazy(() => import('./Register/Register'));
-const Login = lazy(() => import('./Login/Login'));
-const Contacts = lazy(() => import('./Contacts/Contacts'));
+const Homepage = lazy(() => import('pages/Homepage/Homepage'));
+const Register = lazy(() => import('pages/Register/Register'));
+const Login = lazy(() => import('pages/Login/Login'));
+const Contacts = lazy(() => import('pages/Contacts/Contacts'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -21,21 +18,43 @@ export const App = () => {
     dispatch(fetchCurrentUser());
   }, [dispatch]);
 
-  const loader = useSelector(state => state.contacts.isLoading);
-
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
+        <Route
+          index
+          element={
+            <PublicRoute>
+              <Homepage />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="register"
+          element={
+            <PublicRoute restricted>
+              <Register />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="login"
+          element={
+            <PublicRoute restricted>
+              <Login />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="contacts"
+          element={
+            <PrivateRoute>
+              <Contacts />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
-    // <Container>
-    //   {loader && <Loader />}
-    //   <MainHeader>Phonebook</MainHeader>
-    //   <ContactForm />
-    //   <SubHeader>Contacts</SubHeader>
-    //   <Filter />
-    //   <ContactList />
-    // </Container>
   );
 };
