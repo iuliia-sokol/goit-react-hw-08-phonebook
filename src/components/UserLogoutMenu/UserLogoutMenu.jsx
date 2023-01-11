@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { BiHappyBeaming } from 'react-icons/bi';
-import { Wrapper, LogoutBtn, WelcomeText } from './UserLogoutMenu.styled';
+import { Wrapper, WelcomeText } from './UserLogoutMenu.styled';
 import { logoutUser } from '../../redux/authOperations';
 import { getUserName } from 'redux/authSelectors';
 import { Btn } from 'components/Btn/Btn';

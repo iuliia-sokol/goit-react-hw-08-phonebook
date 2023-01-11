@@ -15,7 +15,8 @@ const Homepage = () => {
             <img alt="animation" width="100%" srcSet={Animation} />
           </ImgWrapper>
           <HomeTitle>
-            <PhonebookLogo /> welcomes you, <span>{name}</span>! <br />
+            Hey, <span>{name}</span>, let's check your <PhonebookLogo /> !{' '}
+            <br />
             Here we go!
           </HomeTitle>
         </Container>
