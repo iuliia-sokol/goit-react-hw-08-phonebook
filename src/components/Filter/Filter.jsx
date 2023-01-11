@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import { FilterWrapper } from './Filter.styled';
 import { Label } from '../ContactForm/ContactForm.styled';
+import { getFilter } from 'redux/filterSelectors';
 
 const FilterInput = styled(DebounceInput)`
   min-width: 50%;
@@ -18,7 +19,7 @@ const FilterInput = styled(DebounceInput)`
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filter);
+  const filter = useSelector(getFilter);
 
   return (
     <FilterWrapper>

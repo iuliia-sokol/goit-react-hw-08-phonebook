@@ -28,7 +28,7 @@ const Homepage = () => {
           </ImgWrapper>
           <HomeTitle>
             Welcome to <PhonebookLogo /> ! <br />
-            Keep all you contacts in one place!
+            Keep you contacts well organized!
           </HomeTitle>
         </Container>
       )}

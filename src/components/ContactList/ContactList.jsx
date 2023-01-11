@@ -6,6 +6,8 @@ import { notifySettings } from '../../utils/notifySettings';
 import { List } from './ContactList.styled';
 import { ContactItem } from './CotactItem';
 import { fetchContacts, deleteContact } from 'redux/contactsOperations';
+import { getContactsItems } from 'redux/contactsSelectors';
+import { getFilter } from 'redux/filterSelectors';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -14,8 +16,8 @@ export const ContactList = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const contacts = useSelector(state => state.contacts.items);
-  const filter = useSelector(state => state.filter);
+  const contacts = useSelector(getContactsItems);
+  const filter = useSelector(getFilter);
 
   const filterContacts = () => {
     const query = filter.toLocaleLowerCase();
