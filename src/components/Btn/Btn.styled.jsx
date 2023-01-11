@@ -5,7 +5,7 @@ export const BtnElement = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 8px 16px;
   font-size: 24px;
   font-weight: bold;
   border: none;
@@ -20,6 +20,10 @@ export const BtnElement = styled.button`
     background-color: ${props =>
       props.status === 'add'
         ? 'rgba(0, 128, 75, 0.7)'
+        : props.status === 'login'
+        ? 'rgba(71, 207, 150, 0.7)'
+        : props.status === 'register'
+        ? 'rgba(248, 220, 92, 0.7)'
         : 'rgba(202, 30, 30, 0.6)'};
     box-shadow: 0px 14px 6px 4px #cab1b98c;
   }
