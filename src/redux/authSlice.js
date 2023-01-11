@@ -88,7 +88,6 @@ export const authSlice = createSlice({
       .addCase(fetchCurrentUser.pending, onPending)
       .addCase(fetchCurrentUser.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        console.log(payload);
         state.user = payload;
         state.isLoggedIn = true;
         Notiflix.Notify.success(
