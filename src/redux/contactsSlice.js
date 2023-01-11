@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from './operations';
+import { fetchContacts, addContact, deleteContact } from './contactsOperations';
 import Notiflix from 'notiflix';
 import { notifySettings } from '../utils/notifySettings';
 // import { defaultContacts } from '../utils/defaultContacts';

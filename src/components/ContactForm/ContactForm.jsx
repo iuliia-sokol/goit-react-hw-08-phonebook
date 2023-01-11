@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Notiflix from 'notiflix';
 import { MdPersonAddAlt1 } from 'react-icons/md';
-import { addContact } from '../../redux/operations';
+import { addContact } from '../../redux/contactsOperations';
 import { Form, Label } from './ContactForm.styled';
 import { Btn } from '../Btn/Btn';
 import { InputItem } from './InputItem';
