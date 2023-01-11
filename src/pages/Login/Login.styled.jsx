@@ -23,7 +23,7 @@ export const GoBackLinkWrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  max-width: 70%;
+  max-width: 60%;
   gap: 32px;
   padding: 48px 56px;
   display: flex;
@@ -78,7 +78,6 @@ export const AuthNotify = styled.p`
   font-size: 14px;
   line-height: 1.33;
   color: black;
-
   border: 1px solid yellow;
   border-radius: 10px;
   box-shadow: 0 0 10em 1em rgba(255, 139, 72, 0.6);
@@ -137,3 +136,5 @@ export const Label = styled.label`
     font-weight: bold;
   }
 `;
+
+export const ImgWrapper = styled.div``;

@@ -13,6 +13,7 @@ import {
   Form,
   AuthNotify,
   InputsWrapper,
+  ImgWrapper,
 } from './Login.styled';
 import { NavLink } from 'components/NavLink/NavLink';
 import { Btn } from 'components/Btn/Btn';
@@ -58,9 +59,9 @@ const Login = () => {
       </GoBackLinkWrapper>
 
       <FormWrapper>
-        <div>
+        <ImgWrapper>
           <img alt="animation" width="100%" srcSet={Animation} />
-        </div>
+        </ImgWrapper>
         <Form onSubmit={handleSubmit}>
           <InputsWrapper>
             <Input
