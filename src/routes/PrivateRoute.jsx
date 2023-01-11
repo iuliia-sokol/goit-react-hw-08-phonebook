@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { getLogStatus } from 'redux/selectors';
+import { getLogStatus } from 'redux/authSelectors';
 
 export const PrivateRoute = ({ children }) => {
   const isLoggedIn = useSelector(getLogStatus);

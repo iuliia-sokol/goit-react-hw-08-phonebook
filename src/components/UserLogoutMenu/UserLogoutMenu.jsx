@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { LogoutBtn, WelcomeText } from './UserLogoutMenu.styled';
 import { logoutUser } from '../../redux/authOperations';
-import { getUserName } from 'redux/selectors';
+import { getUserName } from 'redux/authSelectors';
 
 export const UserLogoutMenu = () => {
   const dispatch = useDispatch();

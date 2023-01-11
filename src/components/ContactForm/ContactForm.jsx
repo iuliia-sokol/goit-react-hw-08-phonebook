@@ -7,13 +7,14 @@ import { Form, Label } from './ContactForm.styled';
 import { Btn } from '../Btn/Btn';
 import { InputItem } from './InputItem';
 import { notifySettings } from '../../utils/notifySettings';
+import { getContactsItems } from 'redux/contactsSelectors';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector(getContactsItems);
 
   const onInputChange = event => {
     switch (event.target.name) {

@@ -6,7 +6,7 @@ import { Loader } from '../../components/Loader/Loader';
 import { Navigation } from 'components/Navigation/Navigation';
 import { UserLogoutMenu } from 'components/UserLogoutMenu/UserLogoutMenu';
 import { UserLoginMenu } from 'components/UserLoginMenu/UserLoginMenu';
-import { getLogStatus } from 'redux/selectors';
+import { getLogStatus } from 'redux/authSelectors';
 
 export const SharedLayout = () => {
   const isLoggedIn = useSelector(getLogStatus);

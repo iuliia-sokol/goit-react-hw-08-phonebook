@@ -3,7 +3,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
 import { useSelector } from 'react-redux';
-import { getLoadingStatus } from 'redux/selectors';
+import { getLoadingStatus } from 'redux/authSelectors';
 import { Container, MainHeader, SubHeader } from './Contacts.styled';
 
 export const Contacts = () => {

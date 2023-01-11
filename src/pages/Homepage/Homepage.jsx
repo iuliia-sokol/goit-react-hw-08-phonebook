@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { HomeMain, HomeTitle } from './Homepage.styled';
-import { getLogStatus, getUserName } from 'redux/selectors';
+import { getLogStatus, getUserName } from 'redux/authSelectors';
 
 const Homepage = () => {
   const isLoggedIn = useSelector(getLogStatus);
