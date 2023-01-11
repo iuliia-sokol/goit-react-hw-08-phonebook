@@ -13,10 +13,11 @@ export const Link = styled(NavLink)`
   font-size: 24px;
   transform: scale(1);
   box-shadow: none;
+  height: fit-content;
 
   &:hover,
   &:focus {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     border: ${props =>
       props.status === 'login' || props.status === 'register'
         ? 'none'

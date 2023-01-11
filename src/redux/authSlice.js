@@ -57,7 +57,7 @@ export const authSlice = createSlice({
         state.token = payload.token;
         state.isLoggedIn = true;
         Notiflix.Notify.success(
-          `Welcome back, ${payload.user}!`,
+          `Welcome back, ${payload.name}!`,
           notifySettings
         );
       })

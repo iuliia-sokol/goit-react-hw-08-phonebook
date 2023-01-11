@@ -15,7 +15,7 @@ export const ImgWrapper = styled.div`
   z-index: -100;
 `;
 
-export const HomeMain = styled.div`
+export const HomeMain = styled.main`
   width: 100%;
   text-align: center;
 `;

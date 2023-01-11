@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Header = styled.header`
   padding: 24px 42px;
   margin-bottom: 36px;
+  height: 50px;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
