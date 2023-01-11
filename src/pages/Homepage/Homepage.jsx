@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { HomeMain, ImgWrapper, HomeTitle, Container } from './Homepage.styled';
 import { getLogStatus, getUserName } from 'redux/authSelectors';
 import Animation from '../../images/people.gif';
+import Animation2 from '../../images/app.gif';
 import { PhonebookLogo } from 'components/Logo/Logo';
 const Homepage = () => {
   const isLoggedIn = useSelector(getLogStatus);
@@ -21,9 +22,15 @@ const Homepage = () => {
           </HomeTitle>
         </Container>
       ) : (
-        <>
-          <HomeTitle>Welcome to Phonebook!</HomeTitle>
-        </>
+        <Container>
+          <ImgWrapper>
+            <img alt="animation" width="100%" srcSet={Animation2} />
+          </ImgWrapper>
+          <HomeTitle>
+            Welcome to <PhonebookLogo /> ! <br />
+            Keep all you contacts in one place!
+          </HomeTitle>
+        </Container>
       )}
     </HomeMain>
   );

@@ -5,17 +5,14 @@ export const Container = styled.div`
   padding: 0 62px;
   display: flex;
   gap: 24px;
-
   justify-content: center;
   align-items: center;
-
   margin-top: -5%;
 `;
 
 export const ImgWrapper = styled.div`
-  /* position: absolute; */
   transform: translateY(-10%);
-  z-index: -1;
+  z-index: -100;
 `;
 
 export const HomeMain = styled.div`

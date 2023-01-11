@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const Container = styled.div`
   margin: 0 auto;
   padding: 0 16px;
+  z-index: 10000;
 `;
 
 export const Header = styled.header`
@@ -13,6 +14,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10000;
 
   > nav {
     max-height: 40px;
