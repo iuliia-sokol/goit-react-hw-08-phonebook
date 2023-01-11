@@ -16,17 +16,18 @@ export const fetchCurrentUser = createAsyncThunk(
   'auth/fetchCurrentUser',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
-    const currentToken = state.auth.token;
-    if (currentToken === null) {
+
+    if (state.auth.token === null) {
       return thunkAPI.rejectWithValue();
     }
-    setToken(currentToken);
+
+    setToken(state.auth.token);
     try {
       const { data } = await axios.get(`/users/current`);
       return data;
     } catch (error) {
       Notiflix.Notify.failure(`${error.message}`, notifySettings);
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue(error.request.status);
     }
   }
 );
@@ -59,7 +60,7 @@ export const loginUser = createAsyncThunk(
   }
 );
 
-export const LogoutUser = createAsyncThunk(
+export const logoutUser = createAsyncThunk(
   'auth/LogOut',
   async (_, thunkAPI) => {
     try {
