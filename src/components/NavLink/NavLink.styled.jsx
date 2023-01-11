@@ -14,13 +14,14 @@ export const Link = styled(NavLink)`
   transform: scale(1);
   box-shadow: none;
   height: fit-content;
+  border: 1px solid transparent;
 
   &:hover,
   &:focus {
     /* transform: scale(1.1); */
     border: ${props =>
       props.status === 'login' || props.status === 'register'
-        ? 'none'
+        ? '1px solid transparent'
         : ' 1px solid rgba(0, 128, 75, 0.7)'};
 
     background-color: ${props =>

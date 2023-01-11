@@ -108,9 +108,7 @@ const Register = () => {
 
           <BtnsWrapper>
             <BtnWrapper>
-              <Btn type="submit" status="register" text="Create account">
-                Create account
-              </Btn>
+              <Btn type="submit" status="register" text="Create account" />
               <AuthNotify>Newcomer? Create an account!</AuthNotify>
             </BtnWrapper>
 

@@ -96,7 +96,7 @@ const Login = () => {
             </BtnWrapper>
 
             <BtnWrapper>
-              <NavLink text="Register" status="register" to="/register" />
+              <NavLink text="Sing up" status="register" to="/register" />
               <AuthNotify>Newcomer? Create an account!</AuthNotify>
             </BtnWrapper>
           </BtnsWrapper>
