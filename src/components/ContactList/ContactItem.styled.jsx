@@ -1,5 +1,25 @@
 import styled from 'styled-components';
 
+export const PhoneLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+
+  & > span {
+    font-weight: normal;
+  }
+`;
+
+export const BtnsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const AvatarWrapper = styled.div`
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+`;
 export const ListItem = styled.li`
   min-width: 50vw;
   display: flex;
@@ -13,7 +33,19 @@ export const ListItem = styled.li`
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 `;
 
-export const ListItemData = styled.p`
+export const ListItemData = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   font-size: 24px;
   margin-right: 36px;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+`;
+
+export const DataWrapper = styled.div`
+  & > span {
+    font-weight: normal;
+  }
 `;

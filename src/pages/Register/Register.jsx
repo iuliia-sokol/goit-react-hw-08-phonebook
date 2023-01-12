@@ -46,7 +46,7 @@ const Register = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // console.log(name, email, password);
+
     dispatch(registerUser({ name, email, password }));
     resetForm();
   };
@@ -60,7 +60,7 @@ const Register = () => {
   return (
     <Container>
       <GoBackLinkWrapper>
-        <Btn onClick={() => navigate(-1)} text="Go back" />
+        <Btn onClick={() => navigate(-1)} text="Go back" status="goBack" />
         <Header>Let's register</Header>
       </GoBackLinkWrapper>
 

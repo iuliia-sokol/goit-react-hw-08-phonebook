@@ -23,8 +23,10 @@ export const BtnElement = styled.button`
         ? 'rgba(0, 128, 75, 0.7)'
         : props.status === 'login'
         ? 'rgba(71, 207, 150, 0.7)'
-        : props.status === 'register'
+        : props.status === 'register' || props.status === 'edit'
         ? 'rgba(248, 220, 92, 0.7)'
+        : props.status === 'goBack'
+        ? 'rgba(0, 128, 75, 0.7)'
         : 'rgba(202, 30, 30, 0.6)'};
     box-shadow: 0px 14px 6px 4px #cab1b98c;
   }

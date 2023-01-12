@@ -54,7 +54,7 @@ const Login = () => {
   return (
     <Container>
       <GoBackLinkWrapper>
-        <Btn onClick={() => navigate(-1)} text="Go back" />
+        <Btn onClick={() => navigate(-1)} text="Go back" status="goBack" />
         <Header>Let's log in</Header>
       </GoBackLinkWrapper>
 

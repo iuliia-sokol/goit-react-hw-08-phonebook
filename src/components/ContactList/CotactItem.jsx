@@ -1,21 +1,55 @@
 import PropTypes from 'prop-types';
 import { MdPersonRemoveAlt1 } from 'react-icons/md';
-import { ListItem, ListItemData } from './ContactItem.styled';
+import {
+  ListItem,
+  ListItemData,
+  PhoneLink,
+  BtnsWrapper,
+  AvatarWrapper,
+  DataWrapper,
+} from './ContactItem.styled';
 import { Btn } from '../Btn/Btn';
+import Avatar from '../../images/woman.png';
 
-export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
+export const ContactItem = ({
+  id,
+  name,
+  number,
+  onDeleteBtnClick,
+  toggleModal,
+}) => {
   return (
     <ListItem>
+      <AvatarWrapper>
+        <img src={Avatar} alt={name} width="48" />
+      </AvatarWrapper>
       <ListItemData>
-        {name}: {number}
+        <DataWrapper>
+          Name:<span> {name} </span>
+        </DataWrapper>
+        <DataWrapper>
+          Phone:{' '}
+          <PhoneLink href={`tel:${number}`}>
+            <span>{number}</span>
+          </PhoneLink>
+        </DataWrapper>
       </ListItemData>
-      <Btn
-        icon={MdPersonRemoveAlt1}
-        type="button"
-        status="delete"
-        text="Delete contact"
-        onClick={() => onDeleteBtnClick(id, name)}
-      />
+      <BtnsWrapper>
+        <Btn
+          icon={MdPersonRemoveAlt1}
+          type="button"
+          status="delete"
+          text="Delete contact"
+          onClick={() => onDeleteBtnClick(id, name)}
+        />
+        <Btn
+          icon={MdPersonRemoveAlt1}
+          type="button"
+          status="edit"
+          text="Edit contact"
+          onClick={() => toggleModal(id)}
+        />
+      </BtnsWrapper>
     </ListItem>
   );
 };
