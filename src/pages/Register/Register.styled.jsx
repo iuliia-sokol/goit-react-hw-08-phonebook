@@ -24,7 +24,6 @@ export const GoBackLinkWrapper = styled.div`
 
 export const FormWrapper = styled.div`
   max-width: 70%;
-  /* gap: 32px; */
   padding: 48px 56px 48px 10px;
   display: flex;
   justify-content: space-between;
@@ -90,7 +89,9 @@ export const AuthNotify = styled.p`
 
 export const BtnsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 24px;
 `;
