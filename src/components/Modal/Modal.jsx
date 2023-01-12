@@ -9,6 +9,7 @@ import { ModalForm } from './ModalForm';
 const modalRoot = document.querySelector('#modal-root');
 
 export const Modal = ({ id, closeModal }) => {
+  console.log(id);
   useEffect(() => {
     const onEscPress = event => {
       if (event.code === 'Escape') {
@@ -32,7 +33,7 @@ export const Modal = ({ id, closeModal }) => {
   return createPortal(
     <ModalOverlay onClick={onBackdropClick}>
       <ModalWindow>
-        <ModalForm id={id} />
+        <ModalForm id={id} closeModal={closeModal} />
       </ModalWindow>
     </ModalOverlay>,
     modalRoot

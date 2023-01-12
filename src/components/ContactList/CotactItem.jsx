@@ -10,14 +10,16 @@ import {
 } from './ContactItem.styled';
 import { Btn } from '../Btn/Btn';
 import Avatar from '../../images/woman.png';
+import { useState } from 'react';
+import { Modal } from 'components/Modal/Modal';
 
-export const ContactItem = ({
-  id,
-  name,
-  number,
-  onDeleteBtnClick,
-  toggleModal,
-}) => {
+export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <ListItem>
       <AvatarWrapper>
@@ -50,6 +52,7 @@ export const ContactItem = ({
           onClick={() => toggleModal(id)}
         />
       </BtnsWrapper>
+      {showModal && <Modal id={id} closeModal={toggleModal} />}
     </ListItem>
   );
 };

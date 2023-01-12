@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { FaUserEdit } from 'react-icons/fa';
+import Notiflix from 'notiflix';
 
 import {
   AvatarWrapper,
-  // BtnsWrapper,
   InputWrapper,
   Input,
   Label,
@@ -12,14 +12,20 @@ import {
 } from './ModalForm.styled';
 import Avatar from '../../images/woman.png';
 import { Btn } from 'components/Btn/Btn';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateContact } from 'redux/contactsOperations';
+import { getContactsItems } from 'redux/contactsSelectors';
+import { notifySettings } from 'utils/notifySettings';
 
-export const ModalForm = ({ id }) => {
+export const ModalForm = ({ id, closeModal }) => {
+  const contacts = useSelector(getContactsItems);
+  const currentContact = contacts.find(contact => contact.id === id);
+
+  console.log(id);
   const dispatch = useDispatch();
 
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [name, setName] = useState(`${currentContact.name}`);
+  const [number, setNumber] = useState(`${currentContact.number}`);
 
   const onInputChange = event => {
     switch (event.target.name) {
@@ -36,19 +42,15 @@ export const ModalForm = ({ id }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    const includesName = contacts.find(
+      contact => contact.name === name && contact.number === number
+    );
 
-    // const includesName = contacts.find(
-    //   contact => contact.name.toLocaleLowerCase() === name.toLocaleLowerCase()
-    // );
-
-    // if (includesName) {
-    //   return Notiflix.Notify.warning(
-    //     `${name} is already in contacts`,
-    //     notifySettings
-    //   );
-    // }
-
+    if (includesName) {
+      return Notiflix.Notify.warning('No data changed', notifySettings);
+    }
     dispatch(updateContact({ id, name, number }));
+    closeModal();
     resetForm();
   };
 

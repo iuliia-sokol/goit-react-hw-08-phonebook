@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Notiflix from 'notiflix';
 import { notifySettings } from '../../utils/notifySettings';
 
@@ -8,15 +8,8 @@ import { ContactItem } from './CotactItem';
 import { fetchContacts, deleteContact } from 'redux/contactsOperations';
 import { getContactsItems } from 'redux/contactsSelectors';
 import { getFilter } from 'redux/filterSelectors';
-import { Modal } from 'components/Modal/Modal';
 
 export const ContactList = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,6 +40,7 @@ export const ContactList = () => {
     <>
       <List>
         {filterContacts().map(contact => {
+          console.log(contact);
           return (
             <ContactItem
               id={contact.id}
@@ -54,12 +48,10 @@ export const ContactList = () => {
               name={contact.name}
               number={contact.number}
               onDeleteBtnClick={() => dispatch(deleteContact(contact.id))}
-              toggleModal={toggleModal}
             />
           );
         })}
       </List>
-      {showModal && <Modal closeModal={toggleModal} />}
     </>
   );
 };
