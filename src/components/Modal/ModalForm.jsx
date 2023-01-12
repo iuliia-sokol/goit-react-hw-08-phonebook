@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaUserEdit } from 'react-icons/fa';
+import { FaUserCheck } from 'react-icons/fa';
 import Notiflix from 'notiflix';
 import PropTypes from 'prop-types';
 
@@ -93,7 +93,7 @@ export const ModalForm = ({ id, closeModal }) => {
             </Label>
           </InputWrapper>
           <Btn
-            icon={FaUserEdit}
+            icon={FaUserCheck}
             type="submit"
             status="update"
             text="Update contact"
