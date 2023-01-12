@@ -23,9 +23,9 @@ export const GoBackLinkWrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  max-width: 60%;
-  gap: 32px;
-  padding: 48px 56px;
+  max-width: 70%;
+  /* gap: 32px; */
+  padding: 48px 56px 48px 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;

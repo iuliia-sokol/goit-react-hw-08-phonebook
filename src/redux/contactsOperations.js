@@ -46,11 +46,11 @@ export const deleteContact = createAsyncThunk(
 
 export const updateContact = createAsyncThunk(
   'contacts/updateContact',
-  async ({ id, name, number, navig }, thunkAPI) => {
+  async ({ id, name, number }, thunkAPI) => {
     try {
       const obj = { name, number };
       const { data } = await axios.patch(`/contacts/${id}`, obj);
-      // navig();
+
       return data;
     } catch (error) {
       Notiflix.Notify.failure(`${error.message}`, notifySettings);
