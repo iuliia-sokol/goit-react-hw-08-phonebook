@@ -69,7 +69,7 @@ export const ModalForm = ({ id, closeModal }) => {
         <ListItemForm onSubmit={handleSubmit}>
           <InputWrapper>
             <Label>
-              New name:
+              Change name:
               <Input
                 onChange={onInputChange}
                 value={name}
@@ -80,7 +80,7 @@ export const ModalForm = ({ id, closeModal }) => {
               />
             </Label>
             <Label>
-              New phone:
+              Change phone:
               <Input
                 onChange={onInputChange}
                 value={number}

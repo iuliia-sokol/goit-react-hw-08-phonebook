@@ -81,11 +81,11 @@ export const contactsSlice = createSlice({
       .addCase(updateContact.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload;
-        console.log(payload);
-        // Notiflix.Notify.failure(
-        //   `"${state.error.name}:${state.error.number} is already in contacts,
-        //   notifySettings
-        // );
+        // console.log(payload);
+        Notiflix.Notify.failure(
+          'Something went wrong, please try again',
+          notifySettings
+        );
       });
   },
 });

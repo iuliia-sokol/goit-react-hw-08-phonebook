@@ -41,13 +41,12 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ListItemForm = styled.form`
-  font-size: 24px;
+  font-size: 20px;
   color: #010101;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  font-size: 24px;
   border-radius: 12px;
 `;
 
