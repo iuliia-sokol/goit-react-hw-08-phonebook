@@ -50,5 +50,7 @@ export const Modal = ({ id, closeModal, status, name }) => {
 
 Modal.propTypes = {
   id: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  status: propTypes.string.isRequired,
   closeModal: propTypes.func.isRequired,
 };

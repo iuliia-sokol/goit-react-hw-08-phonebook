@@ -1,5 +1,6 @@
 import { MdDelete } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
 import {
   AvatarWrapper,
@@ -11,7 +12,6 @@ import {
 } from './ModalDelete.styled';
 import Avatar from '../../images/delete.gif';
 import { Btn } from 'components/Btn/Btn';
-import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsOperations';
 
 export const ModalDeleteConfirmation = ({ id, closeModal, name }) => {
@@ -47,5 +47,6 @@ export const ModalDeleteConfirmation = ({ id, closeModal, name }) => {
 
 ModalDeleteConfirmation.propTypes = {
   id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   closeModal: PropTypes.func.isRequired,
 };

@@ -11,14 +11,12 @@ export const TextWrapper = styled.div`
 export const AvatarWrapper = styled.div`
   border-radius: 50%;
   padding: 3px;
-
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 
   & > img {
     border-radius: 50%;
     width: 150px;
     height: 140px;
-    /* height: 120px; */
   }
 `;
 
@@ -27,6 +25,7 @@ export const Hint = styled.p`
   letter-spacing: 0.03em;
   margin: 0;
 `;
+
 export const ListItem = styled.div`
   min-width: 50vw;
   display: flex;
