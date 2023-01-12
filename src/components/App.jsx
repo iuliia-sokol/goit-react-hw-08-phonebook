@@ -49,7 +49,7 @@ export const App = () => {
         <Route
           path="contacts"
           element={
-            <PrivateRoute redirectTo="/login">
+            <PrivateRoute restricted redirectTo="/login">
               <Contacts />
             </PrivateRoute>
           }
