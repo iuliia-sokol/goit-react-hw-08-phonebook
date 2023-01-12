@@ -4,8 +4,18 @@ export const PhoneLink = styled.a`
   text-decoration: none;
   color: inherit;
 
+  &:hover,
+  &:focus {
+    color: rgba(0, 128, 75, 0.7);
+  }
+
   & > span {
     font-weight: normal;
+  }
+
+  &:hover > span,
+  &:focus > span {
+    font-weight: bold;
   }
 `;
 
@@ -27,6 +37,7 @@ export const AvatarWrapper = styled.div`
 `;
 export const ListItem = styled.li`
   max-width: 50vw;
+  width: 45vw;
   display: flex;
   font-weight: bold;
   justify-content: space-between;
@@ -43,9 +54,9 @@ export const ListItemData = styled.div`
   flex-direction: column;
   gap: 16px;
   font-size: 20px;
-  margin-right: 36px;
+  margin: 0 36px;
   border-radius: 12px;
-  padding: 12px;
+  padding: 12px 18px;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 `;
 
