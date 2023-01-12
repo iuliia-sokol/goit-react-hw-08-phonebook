@@ -26,7 +26,7 @@ export const AvatarWrapper = styled.div`
   }
 `;
 export const ListItem = styled.li`
-  min-width: 50vw;
+  max-width: 50vw;
   display: flex;
   font-weight: bold;
   justify-content: space-between;
@@ -42,7 +42,7 @@ export const ListItemData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 36px;
   border-radius: 12px;
   padding: 12px;

@@ -1,23 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
+  padding: 0 62px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   color: #010101;
-  padding: 0 40px;
 `;
 
-export const MainHeader = styled.h2`
-  font-size: 42px;
-  color: #010101;
+export const SubHeader = styled.h2`
+  font-size: 28px;
   text-transform: uppercase;
-`;
-
-export const SubHeader = styled.h3`
-  font-size: 36px;
-  color: #010101;
-  text-transform: uppercase;
+  margin-top: 0;
+  text-align: center;
 `;

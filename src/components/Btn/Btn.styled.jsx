@@ -7,7 +7,7 @@ export const BtnElement = styled.button`
   height: fit-content;
   border-radius: 8px;
   padding: 8px 16px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   border: none;
   background-color: #cab1c79d;

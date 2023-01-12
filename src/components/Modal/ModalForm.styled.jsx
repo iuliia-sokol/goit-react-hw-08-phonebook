@@ -61,6 +61,7 @@ export const Label = styled.label``;
 
 export const Input = styled.input`
   min-width: 50%;
+  outline-color: yellow;
   border-radius: 8px;
   font-size: 20px;
   placeholder: grey;

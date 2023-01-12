@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  width: 30vw;
+  max-width: 30vw;
   height: fit-content;
   min-height: 20vh;
   display: flex;
@@ -21,7 +21,7 @@ export const Label = styled.label`
   width: 100%;
   display: flex;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   justify-content: space-between;
   align-items: center;
 `;
