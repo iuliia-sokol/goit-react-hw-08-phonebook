@@ -5,7 +5,7 @@ import { notifySettings } from '../../utils/notifySettings';
 
 import { List } from './ContactList.styled';
 import { ContactItem } from './CotactItem';
-import { fetchContacts, deleteContact } from 'redux/contactsOperations';
+import { fetchContacts } from 'redux/contactsOperations';
 import { getContactsItems } from 'redux/contactsSelectors';
 import { getFilter } from 'redux/filterSelectors';
 
@@ -46,7 +46,6 @@ export const ContactList = () => {
               key={contact.id}
               name={contact.name}
               number={contact.number}
-              onDeleteBtnClick={() => dispatch(deleteContact(contact.id))}
             />
           );
         })}

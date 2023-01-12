@@ -13,11 +13,13 @@ import Avatar from '../../images/user-icons.gif';
 import { useState } from 'react';
 import { Modal } from 'components/Modal/Modal';
 
-export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
+export const ContactItem = ({ id, name, number }) => {
   const [showModal, setShowModal] = useState(false);
+  const [statusModal, setStatusModal] = useState('');
 
-  const toggleModal = () => {
+  const toggleModal = status => {
     setShowModal(!showModal);
+    setStatusModal(status);
   };
 
   return (
@@ -42,17 +44,25 @@ export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
           type="button"
           status="delete"
           text="Delete contact"
-          onClick={() => onDeleteBtnClick(id, name)}
+          onClick={() => toggleModal('delete')}
+          // onClick={() => onDeleteBtnClick(id, name)}
         />
         <Btn
           icon={FaUserEdit}
           type="button"
           status="edit"
           text="Edit contact"
-          onClick={() => toggleModal(id)}
+          onClick={() => toggleModal('edit')}
         />
       </BtnsWrapper>
-      {showModal && <Modal id={id} closeModal={toggleModal} />}
+      {showModal && (
+        <Modal
+          id={id}
+          closeModal={toggleModal}
+          status={statusModal}
+          name={name}
+        />
+      )}
     </ListItem>
   );
 };
@@ -61,5 +71,4 @@ ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
-  onDeleteBtnClick: PropTypes.func.isRequired,
 };

@@ -5,10 +5,11 @@ import propTypes from 'prop-types';
 import { ModalOverlay, ModalWindow } from './Modal.styled';
 
 import { ModalForm } from './ModalForm';
+import { ModalDeleteConfirmation } from './ModalDelete';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ id, closeModal }) => {
+export const Modal = ({ id, closeModal, status, name }) => {
   useEffect(() => {
     const onEscPress = event => {
       if (event.code === 'Escape') {
@@ -32,7 +33,15 @@ export const Modal = ({ id, closeModal }) => {
   return createPortal(
     <ModalOverlay onClick={onBackdropClick}>
       <ModalWindow>
-        <ModalForm id={id} closeModal={closeModal} />
+        {status === 'edit' ? (
+          <ModalForm id={id} closeModal={closeModal} />
+        ) : (
+          <ModalDeleteConfirmation
+            id={id}
+            name={name}
+            closeModal={closeModal}
+          />
+        )}
       </ModalWindow>
     </ModalOverlay>,
     modalRoot

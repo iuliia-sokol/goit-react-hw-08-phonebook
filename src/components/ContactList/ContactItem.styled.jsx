@@ -12,11 +12,6 @@ export const PhoneLink = styled.a`
   & > span {
     font-weight: normal;
   }
-
-  &:hover > span,
-  &:focus > span {
-    font-weight: bold;
-  }
 `;
 
 export const BtnsWrapper = styled.div`
