@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -21,7 +21,7 @@ import Animation from '../../images/man.gif';
 import { registerUser } from 'redux/authOperations';
 
 const Register = () => {
-  const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -46,7 +46,7 @@ const Register = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(name, email, password);
+    // console.log(name, email, password);
     dispatch(registerUser({ name, email, password }));
     resetForm();
   };
@@ -60,7 +60,7 @@ const Register = () => {
   return (
     <Container>
       <GoBackLinkWrapper>
-        <NavLink to={location.state?.from ?? '/'} text="Go back" />
+        <Btn onClick={() => navigate(-1)} text="Go back" />
         <Header>Let's register</Header>
       </GoBackLinkWrapper>
 

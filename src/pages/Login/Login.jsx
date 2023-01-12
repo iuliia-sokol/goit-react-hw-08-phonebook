@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -21,8 +21,8 @@ import Animation from '../../images/code.gif';
 import { loginUser } from 'redux/authOperations';
 
 const Login = () => {
-  const location = useLocation();
   const dispatch = useDispatch();
+  const navigate = useNavigate(-1);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -54,7 +54,7 @@ const Login = () => {
   return (
     <Container>
       <GoBackLinkWrapper>
-        <NavLink to={location.state?.from ?? '/'} text="Go back" />
+        <Btn onClick={() => navigate(-1)} text="Go back" />
         <Header>Let's log in</Header>
       </GoBackLinkWrapper>
 
