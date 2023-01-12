@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaUserEdit } from 'react-icons/fa';
 
 import {
   AvatarWrapper,
@@ -64,7 +65,7 @@ export const ModalForm = ({ id }) => {
       <ListItemForm onSubmit={handleSubmit}>
         <InputWrapper>
           <Label>
-            Name:
+            New name:
             <Input
               onChange={onInputChange}
               value={name}
@@ -75,7 +76,7 @@ export const ModalForm = ({ id }) => {
             />
           </Label>
           <Label>
-            Phone:
+            New phone:
             <Input
               onChange={onInputChange}
               value={number}
@@ -88,13 +89,12 @@ export const ModalForm = ({ id }) => {
           </Label>
         </InputWrapper>
         <Btn
-          // icon={MdPersonRemoveAlt1}
+          icon={FaUserEdit}
           type="submit"
-          status="save"
+          status="update"
           text="Update contact"
         />
       </ListItemForm>
-      {/* <BtnsWrapper></BtnsWrapper> */}
     </ListItem>
   );
 };

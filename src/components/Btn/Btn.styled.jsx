@@ -21,7 +21,7 @@ export const BtnElement = styled.button`
     background-color: ${props =>
       props.status === 'add'
         ? 'rgba(0, 128, 75, 0.7)'
-        : props.status === 'login'
+        : props.status === 'login' || props.status === 'update'
         ? 'rgba(71, 207, 150, 0.7)'
         : props.status === 'register' || props.status === 'edit'
         ? 'rgba(248, 220, 92, 0.7)'
