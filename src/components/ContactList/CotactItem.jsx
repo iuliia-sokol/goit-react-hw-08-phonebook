@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { MdPersonRemoveAlt1 } from 'react-icons/md';
+import { FaUserEdit } from 'react-icons/fa';
 import {
   ListItem,
   ListItemData,
@@ -45,7 +46,7 @@ export const ContactItem = ({ id, name, number, onDeleteBtnClick }) => {
           onClick={() => onDeleteBtnClick(id, name)}
         />
         <Btn
-          icon={MdPersonRemoveAlt1}
+          icon={FaUserEdit}
           type="button"
           status="edit"
           text="Edit contact"
