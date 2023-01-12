@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Notiflix from 'notiflix';
-import { MdPersonAddAlt1 } from 'react-icons/md';
+import { FaUserPlus } from 'react-icons/fa';
 import { addContact } from '../../redux/contactsOperations';
 import { Form, Label } from './ContactForm.styled';
 import { Btn } from '../Btn/Btn';
@@ -77,12 +77,7 @@ export const ContactForm = () => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         />
       </Label>
-      <Btn
-        type="submit"
-        icon={MdPersonAddAlt1}
-        status="add"
-        text="Add contact"
-      />
+      <Btn type="submit" icon={FaUserPlus} status="add" text="Add contact" />
     </Form>
   );
 };
