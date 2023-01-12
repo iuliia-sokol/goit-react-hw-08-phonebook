@@ -9,7 +9,7 @@ import {
   DataWrapper,
 } from './ContactItem.styled';
 import { Btn } from '../Btn/Btn';
-import Avatar from '../../images/woman.png';
+import Avatar from '../../images/user-icons.gif';
 import { useState } from 'react';
 import { Modal } from 'components/Modal/Modal';
 

@@ -10,8 +10,9 @@ import {
   Label,
   ListItem,
   ListItemForm,
+  ContentWrapper,
 } from './ModalForm.styled';
-import Avatar from '../../images/woman.png';
+import Avatar from '../../images/girl.gif';
 import { Btn } from 'components/Btn/Btn';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateContact } from 'redux/contactsOperations';
@@ -61,42 +62,44 @@ export const ModalForm = ({ id, closeModal }) => {
 
   return (
     <ListItem>
-      <AvatarWrapper>
-        <img src={Avatar} alt="avatar" width="48" />
-      </AvatarWrapper>
-      <ListItemForm onSubmit={handleSubmit}>
-        <InputWrapper>
-          <Label>
-            New name:
-            <Input
-              onChange={onInputChange}
-              value={name}
-              name="name"
-              placeholder="Enter contact`s name"
-              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            />
-          </Label>
-          <Label>
-            New phone:
-            <Input
-              onChange={onInputChange}
-              value={number}
-              type="tel"
-              name="number"
-              placeholder="Enter contact`s number"
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            />
-          </Label>
-        </InputWrapper>
-        <Btn
-          icon={FaUserEdit}
-          type="submit"
-          status="update"
-          text="Update contact"
-        />
-      </ListItemForm>
+      <ContentWrapper>
+        <AvatarWrapper>
+          <img src={Avatar} alt="avatar" />
+        </AvatarWrapper>
+        <ListItemForm onSubmit={handleSubmit}>
+          <InputWrapper>
+            <Label>
+              New name:
+              <Input
+                onChange={onInputChange}
+                value={name}
+                name="name"
+                placeholder="Enter contact`s name"
+                pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              />
+            </Label>
+            <Label>
+              New phone:
+              <Input
+                onChange={onInputChange}
+                value={number}
+                type="tel"
+                name="number"
+                placeholder="Enter contact`s number"
+                pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+              />
+            </Label>
+          </InputWrapper>
+          <Btn
+            icon={FaUserEdit}
+            type="submit"
+            status="update"
+            text="Update contact"
+          />
+        </ListItemForm>
+      </ContentWrapper>
     </ListItem>
   );
 };

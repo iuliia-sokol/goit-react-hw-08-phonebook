@@ -17,8 +17,13 @@ export const BtnsWrapper = styled.div`
 
 export const AvatarWrapper = styled.div`
   border-radius: 50%;
-  padding: 12px;
+
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+
+  & > img {
+    border-radius: 50%;
+    width: 80px;
+  }
 `;
 export const ListItem = styled.li`
   min-width: 50vw;
