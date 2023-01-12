@@ -67,6 +67,7 @@ export const logoutUser = createAsyncThunk(
       await axios.post(`/users/logout`);
       unsetToken();
     } catch (error) {
+      // console.log(error);
       Notiflix.Notify.failure(`${error.message}`, notifySettings);
       return thunkAPI.rejectWithValue(error);
     }

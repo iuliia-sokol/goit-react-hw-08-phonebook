@@ -23,7 +23,7 @@ export const GoBackLinkWrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  max-width: 60%;
+  max-width: 50%;
   gap: 32px;
   padding: 48px 56px;
   display: flex;
