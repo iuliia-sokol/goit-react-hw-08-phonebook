@@ -9,7 +9,6 @@ import { ModalForm } from './ModalForm';
 const modalRoot = document.querySelector('#modal-root');
 
 export const Modal = ({ id, closeModal }) => {
-  console.log(id);
   useEffect(() => {
     const onEscPress = event => {
       if (event.code === 'Escape') {
@@ -41,7 +40,6 @@ export const Modal = ({ id, closeModal }) => {
 };
 
 Modal.propTypes = {
-  // src: propTypes.string.isRequired,
-  // alt: propTypes.string.isRequired,
+  id: propTypes.string.isRequired,
   closeModal: propTypes.func.isRequired,
 };

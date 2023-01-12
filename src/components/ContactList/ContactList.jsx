@@ -40,7 +40,6 @@ export const ContactList = () => {
     <>
       <List>
         {filterContacts().map(contact => {
-          console.log(contact);
           return (
             <ContactItem
               id={contact.id}

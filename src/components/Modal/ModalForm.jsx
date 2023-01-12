@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaUserEdit } from 'react-icons/fa';
 import Notiflix from 'notiflix';
+import PropTypes from 'prop-types';
 
 import {
   AvatarWrapper,
@@ -21,7 +22,6 @@ export const ModalForm = ({ id, closeModal }) => {
   const contacts = useSelector(getContactsItems);
   const currentContact = contacts.find(contact => contact.id === id);
 
-  console.log(id);
   const dispatch = useDispatch();
 
   const [name, setName] = useState(`${currentContact.name}`);
@@ -102,7 +102,6 @@ export const ModalForm = ({ id, closeModal }) => {
 };
 
 ModalForm.propTypes = {
-  // src: propTypes.string.isRequired,
-  // alt: propTypes.string.isRequired,
-  //   closeModal: propTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };
