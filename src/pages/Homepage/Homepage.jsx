@@ -1,6 +1,14 @@
 import { useSelector } from 'react-redux';
 
-import { HomeMain, ImgWrapper, HomeTitle, Container } from './Homepage.styled';
+import {
+  HomeMain,
+  ImgWrapperUnlogged,
+  ImgWrapper,
+  HomeTitle,
+  Container,
+  ContainerUnlogged,
+  HomeTitleUnlogged,
+} from './Homepage.styled';
 import { getLogStatus, getUserName } from 'redux/authSelectors';
 import Animation from '../../images/people.gif';
 import Animation2 from '../../images/app.gif';
@@ -22,15 +30,15 @@ const Homepage = () => {
           </HomeTitle>
         </Container>
       ) : (
-        <Container>
-          <ImgWrapper>
+        <ContainerUnlogged>
+          <ImgWrapperUnlogged>
             <img alt="animation" width="100%" srcSet={Animation2} />
-          </ImgWrapper>
-          <HomeTitle>
+          </ImgWrapperUnlogged>
+          <HomeTitleUnlogged>
             Welcome to <PhonebookLogo /> ! <br />
             Keep your contacts well organized!
-          </HomeTitle>
-        </Container>
+          </HomeTitleUnlogged>
+        </ContainerUnlogged>
       )}
     </HomeMain>
   );
