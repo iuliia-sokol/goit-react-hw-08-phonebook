@@ -7,7 +7,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 24px 16px;
+  padding: 32px;
   border-radius: 12px;
   background-color: hsla(215, 98%, 79%, 0.2);
   border: 2px solid blanchedalmond;
@@ -17,10 +17,8 @@ export const Form = styled.form`
 
   @media screen and (min-width: 768px) {
     max-width: 30vw;
-    padding: 32px;
   }
   @media screen and (min-width: 1280px) {
-    max-width: 30vw;
     margin-bottom: 0;
   }
 `;

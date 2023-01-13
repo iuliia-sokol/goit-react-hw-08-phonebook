@@ -9,14 +9,14 @@ export const Navigation = () => {
     <>
       <HomepageLink to="/">
         <LinkIcon>
-          <FcHome />
+          <FcHome size={24} />
         </LinkIcon>
         <LinkText>Homepage</LinkText>
       </HomepageLink>
       {isLoggedIn && (
         <HomepageLink to="/contacts">
           <LinkIcon>
-            <FcContacts />
+            <FcContacts size={24} />
           </LinkIcon>
           <LinkText>Contacts</LinkText>
         </HomepageLink>

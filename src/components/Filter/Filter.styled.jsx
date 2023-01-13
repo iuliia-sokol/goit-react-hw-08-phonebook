@@ -23,10 +23,10 @@ export const FilterWrapper = styled.div`
     margin-bottom: 0;
     padding: 32px;
     font-size: 24px;
-    width: 45vw;
-    min-width: 40vw;
   }
   @media screen and (min-width: 1280px) {
+    min-width: 40vw;
+    width: 45vw;
     & > label {
       flex-direction: row;
       gap: 0;

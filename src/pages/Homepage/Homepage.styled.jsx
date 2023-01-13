@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  padding: 0 16px;
+  /* padding: 0 16px; */
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -30,7 +30,7 @@ export const HomeMain = styled.main`
 `;
 
 export const HomeTitle = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: black;
 
@@ -43,20 +43,6 @@ export const HomeTitle = styled.p`
   }
   @media screen and (min-width: 1280px) {
     margin-top: -5%;
-  }
-`;
-
-export const Link = styled(NavLink)`
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
-  font-size: 20px;
-  transition: color 250ms linear;
-  :hover,
-  :focus {
-    color: rgb(209, 72, 17);
   }
 `;
 

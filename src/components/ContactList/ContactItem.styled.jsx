@@ -45,13 +45,13 @@ export const ListItem = styled.li`
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 
   @media screen and (min-width: 768px) {
+    padding: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
     flex-direction: row;
     max-width: 50vw;
     width: 45vw;
-  }
-  @media screen and (min-width: 1280px) {
-    padding: 32px;
-    font-size: 20px;
   }
 `;
 
@@ -66,14 +66,13 @@ export const ListItemData = styled.div`
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 
   @media screen and (min-width: 768px) {
-    max-width: 50vw;
-    width: 45vw;
   }
   @media screen and (min-width: 1280px) {
     padding: 32px;
     font-size: 20px;
     margin: 0 36px;
     padding: 12px 18px;
+    max-width: 50vw;
   }
 `;
 

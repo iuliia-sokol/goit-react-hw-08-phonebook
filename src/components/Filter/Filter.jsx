@@ -20,7 +20,6 @@ const FilterInput = styled(DebounceInput)`
   @media screen and (min-width: 768px) {
     font-size: 14px;
     padding: 12px 16px;
-    margin-left: 16px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 16px;

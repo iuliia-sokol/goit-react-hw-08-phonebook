@@ -13,12 +13,15 @@ export const Container = styled.main`
   }
   @media screen and (min-width: 768px) {
     padding: 0 42px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   @media screen and (min-width: 1280px) {
     padding: 0 62px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    /* flex-direction: row-reverse;
+    justify-content: space-between; */
   }
 `;
 
