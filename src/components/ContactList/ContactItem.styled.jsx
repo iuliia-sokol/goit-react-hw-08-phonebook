@@ -31,8 +31,7 @@ export const AvatarWrapper = styled.div`
   }
 `;
 export const ListItem = styled.li`
-  /* max-width: 50vw;
-  width: 45vw; */
+  width: 90%;
   display: flex;
   flex-direction: column;
   font-weight: bold;

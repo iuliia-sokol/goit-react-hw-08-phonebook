@@ -5,7 +5,7 @@ import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
 import { useSelector } from 'react-redux';
 import { getLoadingStatus } from 'redux/authSelectors';
-import { Container, SubHeader } from './Contacts.styled';
+import { Container, SubHeader, BlockWrapper } from './Contacts.styled';
 import Arrow from '../../images/arrowUp.png';
 
 export const Contacts = () => {
@@ -13,15 +13,15 @@ export const Contacts = () => {
   return (
     <Container>
       {loader && <Loader />}
-      <div>
+      <BlockWrapper>
         <SubHeader>Add new contact</SubHeader>
         <ContactForm />
-      </div>
-      <div>
+      </BlockWrapper>
+      <BlockWrapper>
         <SubHeader>Your contacts</SubHeader>
         <Filter />
         <ContactList />
-      </div>
+      </BlockWrapper>
       <ScrollToTop
         showUnder={160}
         style={{

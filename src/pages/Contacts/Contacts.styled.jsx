@@ -5,12 +5,10 @@ export const Container = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
+
   flex-direction: column;
   color: #010101;
 
-  @media screen and (min-width: 320px) {
-  }
   @media screen and (min-width: 768px) {
     padding: 0 42px;
     flex-direction: row-reverse;
@@ -20,9 +18,14 @@ export const Container = styled.main`
 
   @media screen and (min-width: 1280px) {
     padding: 0 62px;
-    /* flex-direction: row-reverse;
-    justify-content: space-between; */
   }
+`;
+
+export const BlockWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SubHeader = styled.h2`

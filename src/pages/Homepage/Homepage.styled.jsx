@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  /* padding: 0 16px; */
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -43,14 +41,5 @@ export const HomeTitle = styled.p`
   }
   @media screen and (min-width: 1280px) {
     margin-top: -5%;
-  }
-`;
-
-export const HomeWrap = styled.p`
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 150px;
   }
 `;

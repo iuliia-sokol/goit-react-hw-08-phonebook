@@ -7,13 +7,10 @@ export const Wrapper = styled.div`
   flex-direction: column-reverse;
   align-items: flex-end;
   justify-content: center;
-  /* flex-direction: column; */
 
   @media screen and (min-width: 1280px) {
     gap: 24px;
     flex-direction: row;
-    /* justify-content: flex-end;
-    align-items:flex-end; */
   }
 `;
 

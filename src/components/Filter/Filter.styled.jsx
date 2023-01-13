@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FilterWrapper = styled.div`
   display: flex;
-  /* justify-content: stretch; */
+  width: 90%;
   align-items: center;
   font-size: 16px;
   color: rgb(1, 1, 1);
@@ -19,14 +19,11 @@ export const FilterWrapper = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 30vw;
     margin-bottom: 0;
     padding: 32px;
     font-size: 24px;
   }
   @media screen and (min-width: 1280px) {
-    min-width: 40vw;
-    width: 45vw;
     & > label {
       flex-direction: row;
       gap: 0;
