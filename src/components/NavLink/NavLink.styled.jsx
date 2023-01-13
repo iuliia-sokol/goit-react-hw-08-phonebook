@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  padding: 8px 16px;
+  padding: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   transform: scale(1);
   box-shadow: none;
   height: fit-content;
@@ -48,5 +48,15 @@ export const Link = styled(NavLink)`
       border: none;
       color: inherit;
     }
+  }
+
+  @media screen and (min-width: 320px) {
+  }
+  @media screen and (min-width: 768px) {
+    padding: 8px 16px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
   }
 `;

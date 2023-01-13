@@ -1,11 +1,28 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  padding: 0 62px;
+  padding: 0 20px;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
   color: #010101;
+
+  @media screen and (min-width: 320px) {
+    padding: 0 62px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 62px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 0 62px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 `;
 
 export const SubHeader = styled.h2`

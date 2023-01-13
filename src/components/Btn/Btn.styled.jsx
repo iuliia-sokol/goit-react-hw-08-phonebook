@@ -6,8 +6,8 @@ export const BtnElement = styled.button`
   justify-content: center;
   height: fit-content;
   border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 20px;
+  padding: 8px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   background-color: #cab1c79d;
@@ -36,5 +36,15 @@ export const BtnElement = styled.button`
 
   & > svg {
     margin-right: 8px;
+  }
+
+  @media screen and (min-width: 320px) {
+  }
+  @media screen and (min-width: 768px) {
+    padding: 8px 16px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
   }
 `;
