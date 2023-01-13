@@ -19,19 +19,17 @@ export const AvatarWrapper = styled.div`
 `;
 
 export const ListItem = styled.div`
-  max-width: 65vw;
+  max-width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   font-size: 16px;
-  padding: 16px;
+  padding: 32px;
   border-radius: 12px;
   background-color: hsla(215, 98%, 79%, 0.2);
 
   @media screen and (min-width: 768px) {
-    max-width: 70vw;
-    padding: 32px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -46,12 +44,14 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
-  padding: 32px;
+  gap: 16px;
+  padding: 16px;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    gap: 32px;
+    padding: 32px;
   }
 `;
 
@@ -85,15 +85,22 @@ export const InputWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  /* width: 100%; */
+  width: 100%;
   display: flex;
   font-weight: bold;
   font-size: 14px;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  gap: 8px;
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    flex-direction: row;
   }
 `;
 
@@ -114,6 +121,5 @@ export const Input = styled.input`
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     margin-left: 0;
-    margin-left: 16px;
   }
 `;

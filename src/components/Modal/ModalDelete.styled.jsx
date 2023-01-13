@@ -33,7 +33,7 @@ export const Hint = styled.p`
 `;
 
 export const ListItem = styled.div`
-  max-width: 65vw;
+  max-width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,12 +59,14 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
-  padding: 32px;
+  gap: 16px;
+  padding: 16px;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    gap: 32px;
+    padding: 32px;
   }
 `;
 
