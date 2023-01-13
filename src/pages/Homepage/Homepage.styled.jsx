@@ -77,11 +77,11 @@ export const HomeTitleUnlogged = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 25px;
   }
- 
 `;
 
 export const Footer = styled.footer`
   padding-top: 24px;
+  padding-bottom: 32px;
   border-top: 1px solid black;
   display: flex;
   flex-wrap: wrap;
@@ -89,15 +89,37 @@ export const Footer = styled.footer`
   align-items: center;
   z-index: 10000;
 
-  @media screen and (min-width: 320px) {
-    flex-wrap: nowrap;
-  }
-
   @media screen and (min-width: 1280px) {
-    height: 60px;
+    padding-bottom: 42px;
   }
 `;
 
 export const Copyright = styled.div``;
 
 export const CopyrightText = styled.p``;
+
+// export const Footer = styled.footer`
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+//   padding-top: 24px;
+//   padding-bottom: 24px;
+//   border-top: 1px solid black;
+//   display: flex;
+
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 10000;
+
+//   @media screen and (min-width: 320px) {
+//     width: 320px;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     width: 768px;
+//   }
+
+//   @media screen and (min-width: 1280px) {
+//     width: 1280px;
+//   }
+// `;
