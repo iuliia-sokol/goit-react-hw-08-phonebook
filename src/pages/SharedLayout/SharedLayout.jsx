@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Suspense } from 'react';
+
 import { Container, Header } from './SharedLayout.styled';
 import { Loader } from '../../components/Loader/Loader';
 import { Navigation } from 'components/Navigation/Navigation';

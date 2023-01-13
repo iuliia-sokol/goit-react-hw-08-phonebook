@@ -77,7 +77,27 @@ export const HomeTitleUnlogged = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 25px;
   }
+ 
+`;
+
+export const Footer = styled.footer`
+  padding-top: 24px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  @media screen and (min-width: 320px) {
+    flex-wrap: nowrap;
+  }
+
   @media screen and (min-width: 1280px) {
-    /* margin-top: -5%; */
+    height: 60px;
   }
 `;
+
+export const Copyright = styled.div``;
+
+export const CopyrightText = styled.p``;

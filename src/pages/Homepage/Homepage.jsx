@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { FaRegCopyright } from 'react-icons/fa';
 
 import {
   HomeMain,
@@ -8,6 +9,9 @@ import {
   Container,
   ContainerUnlogged,
   HomeTitleUnlogged,
+  Footer,
+  Copyright,
+  CopyrightText,
 } from './Homepage.styled';
 import { getLogStatus, getUserName } from 'redux/authSelectors';
 import Animation from '../../images/people.gif';
@@ -40,6 +44,15 @@ const Homepage = () => {
           </HomeTitleUnlogged>
         </ContainerUnlogged>
       )}
+      <Footer>
+        <Copyright>
+          <CopyrightText>
+            Copyright
+            <FaRegCopyright size={16} />
+            2023 <br /> All rights reserved
+          </CopyrightText>
+        </Copyright>
+      </Footer>
     </HomeMain>
   );
 };
