@@ -6,18 +6,12 @@ export const Container = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
 
   @media screen and (min-width: 320px) {
     padding: 0 16px 32px 16px;
   }
   @media screen and (min-width: 768px) {
     padding: 0 42px 64px 42px;
-    /* width: 768px; */
-  }
-
-  @media screen and (min-width: 1280px) {
-    /* width: 1280px; */
   }
 `;
 
@@ -25,7 +19,7 @@ export const Header = styled.h2`
   align-self: center;
   text-transform: uppercase;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     margin-right: 45%;
   }
 `;
@@ -58,9 +52,6 @@ export const FormWrapper = styled.div`
     margin-bottom: 20px;
     max-width: 60%;
   }
-
-  @media screen and (min-width: 1280px) {
-  }
 `;
 
 export const Form = styled.form`
@@ -77,8 +68,7 @@ export const Form = styled.form`
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    /* flex-basis: 40%; */
-    width: 40%;
+    /* width: 40%; */
     padding: 28px 36px;
   }
 `;
@@ -92,7 +82,6 @@ export const InputsWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  /* box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff; */
 `;
 
 export const AuthNotify = styled.p`
