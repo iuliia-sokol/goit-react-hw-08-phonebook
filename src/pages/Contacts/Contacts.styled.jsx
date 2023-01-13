@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  padding: 0 20px;
+  padding: 0 16px;
   display: flex;
   width: 100%;
   flex-direction: column;
   color: #010101;
 
   @media screen and (min-width: 320px) {
-    padding: 0 62px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
   }
   @media screen and (min-width: 768px) {
-    padding: 0 62px;
+    padding: 0 42px;
     flex-direction: row-reverse;
     justify-content: space-between;
   }

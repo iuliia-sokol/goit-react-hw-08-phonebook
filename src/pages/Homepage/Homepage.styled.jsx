@@ -2,41 +2,48 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  padding: 0 62px;
+  padding: 0 16px;
   display: flex;
-  gap: 24px;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  margin-top: -5%;
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    gap: 24px;
+    margin-top: -5%;
+    padding: 0 62px;
+  }
 `;
 
 export const ImgWrapper = styled.div`
-  transform: translateY(-10%);
   z-index: -100;
+  transform: translateY(-20%);
+
+  @media screen and (min-width: 1280px) {
+    transform: translateY(-10%);
+  }
 `;
 
 export const HomeMain = styled.main`
-  width: 100%;
   text-align: center;
 `;
 
-export const HomeTitle = styled.h1`
-  margin-top: -5%;
-  /* margin-top: 20px; */
-  /* margin-bottom: 20px; */
+export const HomeTitle = styled.p`
+  font-size: 18px;
+  font-weight: 500;
   color: black;
+
   span {
     color: rgba(48, 205, 137, 0.787);
     margin-left: 10px;
   }
-`;
-
-export const HomeText = styled.p`
-  margin-top: 100px;
-  margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: 500;
-  color: rgb(209, 72, 17);
+  @media screen and (min-width: 768px) {
+    font-size: 25px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: -5%;
+  }
 `;
 
 export const Link = styled(NavLink)`

@@ -70,7 +70,6 @@ export const Form = styled.form`
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    /* width: 40%; */
     padding: 28px 36px;
   }
 `;

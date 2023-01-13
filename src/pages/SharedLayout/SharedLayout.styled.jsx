@@ -19,17 +19,25 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  padding: 24px 16px;
+  padding: 24px 0;
   margin-bottom: 16px;
   border-bottom: 1px solid black;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   z-index: 10000;
 
+  @media screen and (min-width: 320px) {
+    flex-wrap: nowrap;
+  }
+
   @media screen and (min-width: 768px) {
     padding: 24px 42px;
     margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
     height: 60px;
   }
 `;

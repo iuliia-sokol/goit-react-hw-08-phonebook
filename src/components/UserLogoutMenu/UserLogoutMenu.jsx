@@ -12,7 +12,9 @@ export const UserLogoutMenu = () => {
   return (
     <Wrapper>
       <WelcomeText>
-        <BiHappyBeaming size={36} />
+        <span>
+          <BiHappyBeaming size={24} />
+        </span>
         <p>Welcome back, {name} !</p>
       </WelcomeText>
       <Btn
