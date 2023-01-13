@@ -31,28 +31,50 @@ export const AvatarWrapper = styled.div`
   }
 `;
 export const ListItem = styled.li`
-  max-width: 50vw;
-  width: 45vw;
+  /* max-width: 50vw;
+  width: 45vw; */
   display: flex;
+  flex-direction: column;
   font-weight: bold;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
-  padding: 32px;
+  font-size: 16px;
+  padding: 16px;
   border-radius: 12px;
   background-color: hsla(215, 98%, 79%, 0.1);
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    max-width: 50vw;
+    width: 45vw;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 32px;
+    font-size: 20px;
+  }
 `;
 
 export const ListItemData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-size: 20px;
-  margin: 0 36px;
+  font-size: 16px;
+  margin: 16px;
   border-radius: 12px;
-  padding: 12px 18px;
+  padding: 8px 12px;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+
+  @media screen and (min-width: 768px) {
+    max-width: 50vw;
+    width: 45vw;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 32px;
+    font-size: 20px;
+    margin: 0 36px;
+    padding: 12px 18px;
+  }
 `;
 
 export const DataWrapper = styled.div`

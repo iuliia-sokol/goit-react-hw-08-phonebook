@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.main`
   padding: 0 16px;
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
   flex-direction: column;
   color: #010101;
 
@@ -11,8 +13,6 @@ export const Container = styled.main`
   }
   @media screen and (min-width: 768px) {
     padding: 0 42px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
   }
 
   @media screen and (min-width: 1280px) {
@@ -23,8 +23,15 @@ export const Container = styled.main`
 `;
 
 export const SubHeader = styled.h2`
-  font-size: 28px;
+  font-size: 16px;
   text-transform: uppercase;
   margin-top: 0;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 28px;
+  }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 16px 32px 16px;
   z-index: 10000;
 
   @media screen and (min-width: 320px) {
@@ -11,6 +11,7 @@ export const Container = styled.div`
   }
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding: 32px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -33,11 +34,11 @@ export const Header = styled.header`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 24px 42px;
     margin-bottom: 36px;
   }
 
   @media screen and (min-width: 1280px) {
+    padding: 24px 42px;
     height: 60px;
   }
 `;

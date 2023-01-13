@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FilterWrapper = styled.div`
   display: flex;
-  justify-content: stretch;
+  /* justify-content: stretch; */
   align-items: center;
   font-size: 16px;
   color: rgb(1, 1, 1);
@@ -12,6 +12,12 @@ export const FilterWrapper = styled.div`
   border: 2px solid blanchedalmond;
   box-shadow: 10px 12px 12px 0px #cab1b14d;
 
+  & > label {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   @media screen and (min-width: 768px) {
     max-width: 30vw;
     margin-bottom: 0;
@@ -19,5 +25,12 @@ export const FilterWrapper = styled.div`
     font-size: 24px;
     width: 45vw;
     min-width: 40vw;
+  }
+  @media screen and (min-width: 1280px) {
+    & > label {
+      flex-direction: row;
+      gap: 0;
+      justify-content: stretch;
+    }
   }
 `;

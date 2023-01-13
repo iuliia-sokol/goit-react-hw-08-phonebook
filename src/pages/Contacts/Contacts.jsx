@@ -25,11 +25,11 @@ export const Contacts = () => {
       <ScrollToTop
         showUnder={160}
         style={{
-          bottom: 50,
-          right: 60,
+          bottom: 40,
+          right: 40,
         }}
       >
-        <img alt="arrow up" width="55" srcSet={Arrow} />
+        <img alt="arrow up" width="35" srcSet={Arrow} />
       </ScrollToTop>
     </Container>
   );

@@ -17,8 +17,11 @@ export const Form = styled.form`
 
   @media screen and (min-width: 768px) {
     max-width: 30vw;
-    margin-bottom: 0;
     padding: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 30vw;
+    margin-bottom: 0;
   }
 `;
 
@@ -31,6 +34,9 @@ export const Label = styled.label`
   align-items: center;
 
   @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1280px) {
     font-size: 20px;
   }
 `;
