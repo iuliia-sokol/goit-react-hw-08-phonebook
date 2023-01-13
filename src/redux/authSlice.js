@@ -99,7 +99,6 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.user = payload;
         state.isLoggedIn = true;
-        // console.log(payload);
         Notiflix.Notify.success(
           `Welcome back, ${payload.name}!`,
           notifySettings
@@ -108,6 +107,11 @@ export const authSlice = createSlice({
     builder.addCase(fetchCurrentUser.rejected, (state, { payload }) => {
       state.isLoading = false;
       state.error = payload;
+      if (payload === 401) {
+        state.user = { name: null, email: null };
+        state.token = null;
+        state.isLoggedIn = false;
+      }
     });
   },
 });

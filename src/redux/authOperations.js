@@ -26,6 +26,14 @@ export const fetchCurrentUser = createAsyncThunk(
       const { data } = await axios.get(`/users/current`);
       return data;
     } catch (error) {
+      if (error.request.status === 401) {
+        unsetToken();
+        Notiflix.Notify.failure(
+          `Something went wrong, please log in again`,
+          notifySettings
+        );
+        return thunkAPI.rejectWithValue(error.request.status);
+      }
       Notiflix.Notify.failure(`${error.message}`, notifySettings);
       return thunkAPI.rejectWithValue(error.request.status);
     }
