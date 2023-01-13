@@ -10,6 +10,7 @@ export const BtnElement = styled.button`
   font-size: 16px;
   font-weight: bold;
   border: none;
+  color: white;
   background-color: #cab1c79d;
   box-shadow: 0px 12px 8px 4px #cab1b14d;
   transform: scale(1);
@@ -38,13 +39,8 @@ export const BtnElement = styled.button`
     margin-right: 8px;
   }
 
-  @media screen and (min-width: 320px) {
-  }
   @media screen and (min-width: 768px) {
     padding: 8px 16px;
     font-size: 20px;
-  }
-
-  @media screen and (min-width: 1280px) {
   }
 `;
